@@ -1,0 +1,138 @@
+<!-- FILE: index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FreshMart — Grocery Store</title>
+  <meta name="description" content="FreshMart — Freshness delivered to your door. Vessa-inspired grocery storefront." />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">FM</div>
+        <div>
+          <div class="brand-title">FreshMart</div>
+          <div class="brand-sub">Freshness to your door</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#deals">Deals</a>
+        <a href="#recipes">Recipes</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="controls">
+        <div class="search" role="search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.35-4.35" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <input id="searchInput" placeholder="Search for apples, milk, bread..." />
+        </div>
+        <div class="cart" id="cartBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 6h15l-1.5 9h-12L6 6z" stroke="#065f46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div id="cartCount">0</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-card">
+        <div class="eyebrow">Same-Day • Contactless • Fresh</div>
+        <h1>Fresh groceries, sourced locally — delivered fast.</h1>
+        <p>Weekly deals, subscription boxes, and a freshness guarantee. Shop from fruits, pantry staples, bakery and more — all hand-picked.</p>
+
+        <div class="cta-row">
+          <button class="btn btn-primary" onclick="scrollToSection('shop')">Browse Fresh Picks</button>
+          <button class="btn btn-ghost" onclick="scrollToSection('deals')">This Week's Deals</button>
+        </div>
+
+        <div class="trust-row">
+          <div class="trust-item">
+            <strong>Free delivery</strong>
+            <small>Orders above ₹499</small>
+          </div>
+          <div class="trust-item">
+            <strong>Freshness Promise</strong>
+            <small>Or your money back</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=60" alt="Fresh produce" />
+      </div>
+    </section>
+
+    <!-- categories -->
+    <section id="categories" class="categories" aria-label="Shop categories">
+      <div class="cat" data-cat="Fruits">
+       <img src="fruits.jpg" alt="">
+        <p>Fruits</p>
+      </div>
+      <div class="cat" data-cat="Vegetables">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=200&q=60" alt="Vegetables" />
+        <p>Vegetables</p>
+      </div>
+      <div class="cat" data-cat="Dairy">
+        <img src="dairy and eggs.jpg" alt="Dairy" />
+        <p>Dairy & Eggs</p>
+      </div>
+      <div class="cat" data-cat="Bakery">
+        <img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=200&q=60" alt="Bakery" />
+        <p>Bakery</p>
+      </div>
+      <div class="cat" data-cat="Pantry">
+        <img src="pantry.jpg" alt="Pantry" />
+        <p>Pantry</p>
+      </div>
+    </section>
+
+    <!-- top picks grid -->
+    <section id="shop">
+      <div class="shop-header">
+        <h2>Top Picks</h2>
+        <div class="results">Showing <span id="resultsCount">8</span> items</div>
+      </div>
+
+      <div class="grid" id="productsGrid">
+        <!-- products rendered by JS -->
+      </div>
+    </section>
+
+    <!-- features -->
+    <section class="features">
+      <div class="feature"><div class="icon">🚚</div><div><strong>Same-Day Delivery</strong><div class="muted">Order before 6 PM</div></div></div>
+      <div class="feature"><div class="icon">🛡️</div><div><strong>Freshness Guarantee</strong><div class="muted">Quality checked by hand</div></div></div>
+      <div class="feature"><div class="icon">🔁</div><div><strong>Subscription Boxes</strong><div class="muted">Weekly essentials on autopay</div></div></div>
+    </section>
+
+    <!-- testimonials -->
+    <section class="testimonials">
+      <div class="testimonial">
+        <strong>"Best produce in town — always fresh!"</strong>
+        <p class="muted">— Priya R.</p>
+      </div>
+      <div class="testimonial">
+        <strong>"Quick delivery and friendly staff."</strong>
+        <p class="muted">— Ankit S.</p>
+      </div>
+      <div class="testimonial">
+        <strong>"Subscription saves me so much time."</strong>
+        <p class="muted">— Meera J.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div>© FreshMart 2025 — All rights reserved</div>
+      <div class="footer-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
